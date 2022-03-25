@@ -1,0 +1,128 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 2022-03-24
+  Features:
+    - Matter recipe for mineral mix
+  Balance:
+    - Remove quartz and wood to matter recipes
+    - Ore recipes adjusted
+    - Oil moved to oil processing
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2022-03-21
+  Changes:
+    - change in start items (materials removed, entity added)
+  Balance:
+    - zircon/stone in Sand from water, replaced by zircon dirty water filtration
+    - new zircon recipe, old recipe removed (use stone washing instead)
+    - Stone washing to get more iron/aluminum in the early game.
+    - The coal line is buffed (tweaks to fishing and heavy oil production)
+    - Minor tweaks to old recipes to adjust for new changes
+    - chemical waste cleaning has small chance to produce biomass
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2022-03-20
+  Changes:
+    - improve some of the issues in the early game
+  Balance:
+    - Bigger starting area
+    - new and Improved dirty water recipe
+    - sand from water buff
+  Features:
+    - SE map removed, adds SE warning on main map
+    - Improved dirty water production
+    - chemical waste void
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2022-03-19
+  Balance:
+    - less silica used early game
+    - Cheaper landfill
+    - Dirty water removed from extraction
+    - Landfill can also be made from zircon
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2022-03-18
+  Features:
+    - more ore recipes
+    - Alpha status removed
+    - Second map preset for SE to prevent Island on other planets
+  Balance:
+    - mixed extraction simpler
+    - Mixed extraction can use productivity
+    - Mineral mix productivity removed
+    - Prevents early softlock
+    - raw imersite production buff
+    - new technology
+    - fast filtration plant need electric engine
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 2022-03-17
+  Balance:
+    - Chemical waste fuel value and emission.
+  Features:
+    - new entity can be upgraded
+    - Tint new entityes
+    - Fast filtration plant
+---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2022-03-16
+  Bugfixes:
+    - pipe to ground
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2022-03-16
+  Features:
+    - Dissolver
+  Balance:
+    - Stricter starting items
+    - dissolver used to break concreat and stone-brick
+    - Pipe recipe start
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2022-03-14
+  Features:
+    - landfill from stone available from start
+    - Zircon recipe
+    - Mineral mix
+  Balance:
+    - Uranium moved to filtration plant from Chemical waste
+    - Ore production uses Mineral mix
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2022-03-13
+  Bugfixes:
+    - unlocks recipes already researched
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2022-03-13
+  Compatibility:
+    - Rich Rocks Requiem
+  Features:
+    - crush reinforced plate for stone
+    - Fish recipe
+  Balance:
+    - remove burner electrolysis plant
+    - Add Burner atmospheric condenser:
+    - Stonebrick and concrete extraction use water
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2022-03-12
+  Balance:
+    - Enable productivity for some recipes
+    - Concrete extraction buff
+  Changes:
+    - New icon for early game buildings
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2022-03-12
+  Bugfixes:
+    - bzaluminum required dependancy
+    - Forces essential settings
+  Changes:
+    - Start with some landfill
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2022-03-12
+  Features:
+    - Starting alpha version

@@ -1,0 +1,14 @@
+{
+  "name": "SeaTorio",
+  "version": "0.1.4",
+  "factorio_version": "1.1",
+  "title": "SeaTorio",
+  "author": "Rebecca-x",
+  "description": "No mining, sort and automate raw resources",
+  "dependencies": ["base",
+	"bzaluminum",
+	"bzvery",
+	"Krastorio2",
+	"islands_world",
+	"? Rich-Rocks-Requiem"]
+}
