@@ -1,4 +1,5 @@
 local flib_data_util = require('__flib__.data-util');
+require("entity.offshore-pump")
 --local burner_kr_filtration_plant_item = util.table.deepcopy(data.raw["item"]["kr-filtration-plant"])
 --burner_kr_filtration_plant_item.name = "burner-filtration-plant"
 --burner_kr_filtration_plant_item.localised_name = {"burner-filtration-plant"}
@@ -27,7 +28,15 @@ tiercolor = {
 local burner_kr_filtration_plant_item = flib_data_util.copy_prototype(data.raw["item"]["kr-filtration-plant"], "burner-filtration-plant")
 burner_kr_filtration_plant_item.subgroup = "seatorio-building"
 burner_kr_filtration_plant_item.order = "a[kr-filtration-plant-0]"
-burner_kr_filtration_plant_item.icon = "__SeaTorio__/graphics/filtration-plant.png"
+burner_kr_filtration_plant_item.icons = {
+	{ icon = "__SeaTorio__/graphics/icons/filtration-plant.png", icon_size = 64 },
+	{
+		icon = "__SeaTorio__/graphics/icons/burner.png",
+		icon_size = 64,
+		scale = 0.40,
+		shift = { 8, -8 },
+	},
+}
 data:extend({burner_kr_filtration_plant_item})
 
 local burner_kr_filtration_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-filtration-plant"], "burner-filtration-plant")
@@ -41,15 +50,63 @@ burner_kr_filtration_plant.energy_source = {
 }
 burner_kr_filtration_plant.crafting_speed = 0.75
 burner_kr_filtration_plant.next_upgrade = "kr-filtration-plant"
-burner_kr_filtration_plant.animation.layers[1].tint = tiercolor.t0
-burner_kr_filtration_plant.animation.layers[1].hr_version.tint = tiercolor.t0
+--burner_kr_filtration_plant.animation.layers[1].tint = tiercolor.t0
+--burner_kr_filtration_plant.animation.layers[1].hr_version.tint = tiercolor.t0
+burner_kr_filtration_plant.animation = {
+	layers = {
+		{
+			filename = "__SeaTorio__/graphics/entity/filtration-plant-mk0/filtration-plant.png",
+			priority = "high",
+			width = 230,
+			height = 260,
+			shift = { 0, -0.2 },
+			frame_count = 1,
+			scale = 1,
+			hr_version = {
+				filename = "__SeaTorio__/graphics/entity/filtration-plant-mk0/hr-filtration-plant.png",
+				priority = "high",
+				width = 460,
+				height = 520,
+				shift = { 0, -0.2 },
+				frame_count = 1,
+				scale = 0.5,
+			},
+        },
+	},
+}
+burner_kr_filtration_plant.working_visualisations = {
+	{
+		animation = {
+			filename = "__SeaTorio__/graphics/entity/filtration-plant-mk0/filtration-plant-working.png",
+			priority = "high",
+			width = 170,
+			height = 185,
+			shift = { 0.3, -0.59 },
+			frame_count = 30,
+			line_length = 6,
+			animation_speed = 0.6,
+			scale = 1,
+			hr_version = {
+				filename = "__SeaTorio__/graphics/entity/filtration-plant-mk0/hr-filtration-plant-working.png",
+				priority = "high",
+				width = 340,
+				height = 370,
+				shift = { 0.3, -0.59 },
+				frame_count = 30,
+				line_length = 6,
+				animation_speed = 0.6,
+				scale = 0.5,
+			},
+        },
+	},
+}
 data:extend({burner_kr_filtration_plant})
 
 -------Faster filtration
 local t2_kr_filtration_plant_item = flib_data_util.copy_prototype(data.raw["item"]["kr-filtration-plant"], "t2-filtration-plant")
 t2_kr_filtration_plant_item.subgroup = "seatorio-building"
 t2_kr_filtration_plant_item.order = "a[kr-filtration-plant-2]"
-t2_kr_filtration_plant_item.icon = "__SeaTorio__/graphics/fast-filtration-plant.png"
+t2_kr_filtration_plant_item.icon = "__SeaTorio__/graphics/icons/fast-filtration-plant.png"
 data:extend({t2_kr_filtration_plant_item})
 
 local t2_kr_filtration_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-filtration-plant"], "t2-filtration-plant")
@@ -57,14 +114,70 @@ t2_kr_filtration_plant.module_specification = { module_slots = 3}
 t2_kr_filtration_plant.energy_usage = "750kW"
 t2_kr_filtration_plant.crafting_speed = 2.5
 data.raw["assembling-machine"]["kr-filtration-plant"].next_upgrade = "t2-filtration-plant"
-t2_kr_filtration_plant.animation.layers[1].tint = tiercolor.t2
-t2_kr_filtration_plant.animation.layers[1].hr_version.tint = tiercolor.t2
+--t2_kr_filtration_plant.animation.layers[1].tint = tiercolor.t2
+--t2_kr_filtration_plant.animation.layers[1].hr_version.tint = tiercolor.t2
+t2_kr_filtration_plant.animation = {
+	layers = {
+		{
+			filename = "__SeaTorio__/graphics/entity/filtration-plant-mk3/filtration-plant.png",
+			priority = "high",
+			width = 230,
+			height = 260,
+			shift = { 0, -0.2 },
+			frame_count = 1,
+			scale = 1,
+			hr_version = {
+				filename = "__SeaTorio__/graphics/entity/filtration-plant-mk3/hr-filtration-plant.png",
+				priority = "high",
+				width = 460,
+				height = 520,
+				shift = { 0, -0.2 },
+				frame_count = 1,
+				scale = 0.5,
+			},
+        },
+	},
+}
+t2_kr_filtration_plant.working_visualisations = {
+	{
+		animation = {
+			filename = "__SeaTorio__/graphics/entity/filtration-plant-mk3/filtration-plant-working.png",
+			priority = "high",
+			width = 170,
+			height = 185,
+			shift = { 0.3, -0.59 },
+			frame_count = 30,
+			line_length = 6,
+			animation_speed = 0.6,
+			scale = 1,
+			hr_version = {
+				filename = "__SeaTorio__/graphics/entity/filtration-plant-mk3/hr-filtration-plant-working.png",
+				priority = "high",
+				width = 340,
+				height = 370,
+				shift = { 0.3, -0.59 },
+				frame_count = 30,
+				line_length = 6,
+				animation_speed = 0.6,
+				scale = 0.5,
+			},
+        },
+	},
+}
 data:extend({t2_kr_filtration_plant})
 
 --EARLY chemical
 local burner_chemical_plant_item = flib_data_util.copy_prototype(data.raw["item"]["chemical-plant"], "burner-chemical-plant")
 burner_chemical_plant_item.subgroup = "seatorio-building"
-burner_chemical_plant_item.icon = "__SeaTorio__/graphics/chemical-plant.png"
+burner_chemical_plant_item.icons = {
+	{ icon = "__SeaTorio__/graphics/icons/chemical-plant-mk0.png", icon_size = 64 },
+	{
+		icon = "__SeaTorio__/graphics/icons/burner.png",
+		icon_size = 64,
+		scale = 0.40,
+		shift = { 8, -8 },
+	},
+}
 data:extend({burner_chemical_plant_item})
 
 local burner_chemical_plant = flib_data_util.copy_prototype(data.raw["assembling-machine"]["chemical-plant"], "burner-chemical-plant")
@@ -81,12 +194,52 @@ burner_chemical_plant.crafting_speed = 0.75
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "assembling-machine"
 burner_chemical_plant.fast_replaceable_group = "assembling-machine"
 burner_chemical_plant.next_upgrade = "chemical-plant"
+burner_chemical_plant.animation = make_4way_animation_from_spritesheet({ 
+	layers = {
+		{
+			filename = "__SeaTorio__/graphics/entity/chemical-plant-mk0/chemical-plant.png",
+			width = 108,
+			height = 148,
+			frame_count = 24,
+			line_length = 12,
+			shift = util.by_pixel(1, -9),
+			hr_version = {
+				filename = "__SeaTorio__/graphics/entity/chemical-plant-mk0/hr-chemical-plant.png",
+				width = 220,
+				height = 292,
+				frame_count = 24,
+				line_length = 12,
+				shift = util.by_pixel(0.5, -9),
+				scale = 0.5
+			}
+		},
+		{
+			filename = "__base__/graphics/entity/chemical-plant/chemical-plant-shadow.png",
+			width = 154,
+			height = 112,
+			repeat_count = 24,
+			frame_count = 1,
+			shift = util.by_pixel(28, 6),
+			draw_as_shadow = true,
+			hr_version = {
+				filename = "__base__/graphics/entity/chemical-plant/hr-chemical-plant-shadow.png",
+				width = 312,
+				height = 222,
+				repeat_count = 24,
+				frame_count = 1,
+				shift = util.by_pixel(27, 6),
+				draw_as_shadow = true,
+				scale = 0.5
+			}
+		}
+	}
+})
 data:extend({burner_chemical_plant})
 
 --EARLY greenhouse
 local cheap_greenhouse_item = flib_data_util.copy_prototype(data.raw["item"]["kr-greenhouse"], "cheap-greenhouse")
 cheap_greenhouse_item.subgroup = "seatorio-building"
-cheap_greenhouse_item.icon = "__SeaTorio__/graphics/greenhouse.png"
+cheap_greenhouse_item.icon = "__SeaTorio__/graphics/icons/greenhouse.png"
 data:extend({cheap_greenhouse_item})
 
 local cheap_greenhouse = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-greenhouse"], "cheap-greenhouse")
@@ -101,7 +254,15 @@ data:extend({cheap_greenhouse})
 --EARLY electrolyse
 local burner_atmospheric_condenser_item = flib_data_util.copy_prototype(data.raw["item"]["kr-atmospheric-condenser"], "burner-atmospheric-condenser")
 burner_atmospheric_condenser_item.subgroup = "seatorio-building"
-burner_atmospheric_condenser_item.icon = "__SeaTorio__/graphics/atmospheric-condenser.png"
+burner_atmospheric_condenser_item.icons = {
+	{ icon = "__SeaTorio__/graphics/icons/atmospheric-condenser.png", icon_size = 64 },
+	{
+		icon = "__SeaTorio__/graphics/icons/burner.png",
+		icon_size = 64,
+		scale = 0.40,
+		shift = { 8, -8 },
+	},
+}
 data:extend({burner_atmospheric_condenser_item})
 
 local burner_atmospheric_condenser = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-atmospheric-condenser"], "burner-atmospheric-condenser")
@@ -122,23 +283,15 @@ data:extend({burner_atmospheric_condenser})
 
 --EARLY pump
 
-local burner_offshore_pump_item = flib_data_util.copy_prototype(data.raw["item"]["offshore-pump"], "slow-offshore-pump")
-burner_offshore_pump_item.subgroup = "seatorio-building"
-burner_offshore_pump_item.icon = "__SeaTorio__/graphics/offshore-pump.png"
-data:extend({burner_offshore_pump_item })
+local slow_offshore_pump_item = util.table.deepcopy(data.raw["item"]["offshore-pump"])
+slow_offshore_pump_item.name = "slow-offshore-pump"
+--slow_offshore_pump_item.localised_name = {"slow-offshore-pump"}
+slow_offshore_pump_item.place_result = "slow-offshore-pump"
+slow_offshore_pump_item.icon = "__SeaTorio__/graphics/icons/offshore-pump.png"
+slow_offshore_pump_item.subgroup = "seatorio-building"
+slow_offshore_pump_item.icon_size = 32
+data:extend({slow_offshore_pump_item})
 
-local burner_offshore_pump = flib_data_util.copy_prototype(data.raw["offshore-pump"]["offshore-pump"], "slow-offshore-pump")
-burner_offshore_pump.pumping_speed = 5
-data:extend({burner_offshore_pump})
-
---[[
-local items = {
-	{name = "burner-filtration-plant"},
-	{name = "burner-chemical-plant"},
-	{name = "cheap-greenhouse"},
-	{name = "burner-electrolysis-plant"},
-}
---]]
 
 data:extend({
 
@@ -211,7 +364,6 @@ data:extend({
 		},
 		result = "burner-atmospheric-condenser",
 	},
-
 	{
 		type = "recipe",
 		name = "slow-offshore-pump",

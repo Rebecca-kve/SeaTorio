@@ -108,7 +108,7 @@ data:extend({
     type = "technology",
     name = "t2-filtration-plant",
     icon_size = 64,
-    icon = "__SeaTorio__/graphics/fast-filtration-plant.png",
+    icon = "__SeaTorio__/graphics/icons/fast-filtration-plant.png",
     effects = {
 		{ type = "unlock-recipe", recipe = "t2-filtration-plant" },
     },
@@ -128,7 +128,7 @@ data:extend({
     type = "technology",
     name = "advanced-extraction",
     icon_size = 64,
-    icon = "__SeaTorio__/graphics/advanced-extraction.png",
+    icon = "__SeaTorio__/graphics/icons/advanced-extraction.png",
     effects = {
 		{ type = "unlock-recipe", recipe = "advanced-extraction" },
     },
@@ -148,7 +148,7 @@ data:extend({
     type = "technology",
     name = "concrete-mineral-mix",
     icon_size = 64,
-    icon = "__SeaTorio__/graphics/concrete-mineral-mix.png",
+    icon = "__SeaTorio__/graphics/icons/concrete-mineral-mix.png",
     effects = {
 		{ type = "unlock-recipe", recipe = "concrete-mineral-mix" },
     },
@@ -168,7 +168,7 @@ data:extend({
     type = "technology",
     name = "refined-concrete-mineral-mix",
     icon_size = 64,
-    icon = "__SeaTorio__/graphics/refined-concrete-mineral-mix.png",
+    icon = "__SeaTorio__/graphics/icons/refined-concrete-mineral-mix.png",
     effects = {
 		{ type = "unlock-recipe", recipe = "refined-concrete-mineral-mix" },
     },

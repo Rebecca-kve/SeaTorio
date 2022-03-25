@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 2022-03-25
+  Features:
+    - Reskin icons and entityes
+    - Slow offshore pump uses old skinn
+    - Burner icon on burner item added by this mod
+    - Licence added
+---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2022-03-24
   Features:
