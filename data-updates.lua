@@ -1,6 +1,4 @@
-require("prototypes.k2matter")
-
-
+require("prototypes.updates")
 
 enable_productivity_recipes = {
 "sand-from-water",

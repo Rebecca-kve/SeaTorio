@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2022-03-28
+  Features:
+    - Some more reskining
+    - Add some optional dependancys
+  Balance:
+    - Burner inserters improved
+    - Early fluid controll and wires
+    - Early fluid storage
+    - Flow Control / Advanced Fluid Handling. (early valves)
+    - less wood to make heavy oil/coal -3
+    - Wood fuel value uses vanilla +0.75
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2022-03-25
   Features:

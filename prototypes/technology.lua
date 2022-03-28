@@ -107,8 +107,13 @@ data:extend({
   {
     type = "technology",
     name = "t2-filtration-plant",
-    icon_size = 64,
-    icon = "__SeaTorio__/graphics/icons/fast-filtration-plant.png",
+    icons = {
+		{
+			icon = kr_entities_icons_path .. "filtration-plant.png",
+			icon_size = 64,
+			tint = tiercolor.t2,
+		},
+	},
     effects = {
 		{ type = "unlock-recipe", recipe = "t2-filtration-plant" },
     },
@@ -209,8 +214,80 @@ data:extend({
 		time = 30
 	},
   },
-  
+
+  {
+    type = "technology",
+    name = "fluid-control",
+	icons = {
+		--{ icon = "__base__/graphics/technology/fluid-handling.png", icon_size = 256 },
+		{
+			icon = "__base__/graphics/icons/storage-tank.png",
+			icon_size = 64,
+			scale = 0.5,
+			shift = { 1, -1 },
+		},
+		{
+			icon = "__base__/graphics/icons/pump.png",
+			icon_size = 64,
+			scale = 0.5,
+			shift = { 1, 8 },
+		},
+	},
+    effects = {
+		{type = 'unlock-recipe', recipe = 'pump' },
+		{type = 'unlock-recipe', recipe = 'storage-tank' },
+		{type = 'unlock-recipe', recipe = 'red-wire' },
+		{type = 'unlock-recipe', recipe = 'green-wire' },
+    },
+    prerequisites = {"kr-basic-fluid-handling", "copper-processing"},
+    unit = {
+		count = 30,
+		ingredients =  {
+			{"basic-tech-card", 1},
+		},
+		time = 15
+	},
+  },
+
+
 })
 
+
+if mods["underground-pipe-pack"] then
+data:extend({
+  {
+    type = "technology",
+    name = "Valve",
+	icons = {
+		{ icon = "__underground-pipe-pack__/graphics/icons/check-valve.png", icon_size = 32 },
+		{
+			icon = "__underground-pipe-pack__/graphics/icons/overflow-valve.png",
+			icon_size = 32,
+			scale = 0.35,
+			shift = { 3, -3 },
+		},
+		{
+			icon = "__underground-pipe-pack__/graphics/icons/top-up-valve.png",
+			icon_size = 32,
+			scale = 0.35,
+			shift = { -3, 3 },
+		},
+	},
+    effects = {
+		{type = 'unlock-recipe', recipe = '80-overflow-valve' },
+		{type = 'unlock-recipe', recipe = '80-top-up-valve' },
+		{type = 'unlock-recipe', recipe = 'check-valve' },
+    },
+    prerequisites = {"kr-basic-fluid-handling"},
+    unit = {
+		count = 30,
+		ingredients =  {
+			{"basic-tech-card", 1},
+		},
+		time = 15
+	},
+  },
+})
+end
 
 

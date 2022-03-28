@@ -21,7 +21,6 @@ add_tech_start("dirty-water-filtration-1", "kr-enriched-ores")
 add_tech_start("kr-grow-wood-with-water", "kr-greenhouse")
 add_tech_start("dirty-water-filtration-aluminum", "kr-enriched-ores")
 add_tech_start("dirty-water-filtration-lead", "kr-enriched-ores")
-
 add_tech_start("dirty-water-filtration-zircon", "kr-enriched-ores")
 util.remove_product("dirty-water-filtration-zircon", "titanium-ore")
 
@@ -45,9 +44,37 @@ util.add_effect("kr-reinforced-plates", { type = "unlock-recipe", recipe = "Ston
 util.add_effect("kr-reinforced-plates", { type = "unlock-recipe", recipe = "Stone-from-white-reinforced-plate" })
 util.add_effect("advanced-oil-processing", { type = "unlock-recipe", recipe = "crude-oil-production-2" })
 
+--New tech to unlock fluid handling early
+util.remove_recipe_effect("fluid-handling", "storage-tank" )
+util.remove_recipe_effect("fluid-handling", "pump" )
+util.remove_recipe_effect("circuit-network", "red-wire" )
+util.remove_recipe_effect("circuit-network", "green-wire")
+
+--Costom fit for other mods
+if mods["Flow Control"] then
+	util.remove_prerequisite("flow_control_valves_tech", "fluid-handling")
+	util.add_prerequisite("flow_control_valves_tech", "kr-basic-fluid-handling")
+	util.remove_ingredient("overflow-valve", "electronic-circuit")
+	util.remove_ingredient("underflow-valve", "electronic-circuit")
+	data.raw.technology["flow_control_valves_tech"].unit = {
+		count = 30,
+		ingredients =  {
+			{"basic-tech-card", 1},
+		},
+		time = 15
+	}
+--"pipe-junction","pipe-elbow""pipe-straight",
+end
 if mods["Rich-Rocks-Requiem"] then
 	util.add_effect("rrr-rich-rocks-processing", { type = "unlock-recipe", recipe = "rich-rock-production" })
-end
+end -- I want the option to disable rich rock ores to be viable.
+
+if mods["underground-pipe-pack"] then
+	util.remove_recipe_effect("advanced-underground-piping", "80-overflow-valve")
+	util.remove_recipe_effect("advanced-underground-piping", "80-top-up-valve")
+	util.remove_recipe_effect("advanced-underground-piping", "check-valve")
+end -- Add flow controll early
+--------
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "burner-atmospheric-condenser" })
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "dissolver" })
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "stone-brick-mineral-mix" })

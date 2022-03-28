@@ -198,7 +198,7 @@ data:extend({
         ingredients = {
 			{type = "fluid", name = "steam", amount = 50},
 			{type = "fluid", name = "oxygen", amount = 30},
-			{type = "item", name = "wood", amount = 5},
+			{type = "item", name = "wood", amount = 3},
 			{type = "item", name = "raw-fish", amount = 3}
         },
 		results = {

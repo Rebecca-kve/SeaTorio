@@ -1,6 +1,11 @@
 local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
+local util = require('__bzaluminum__.data-util');
 matter.removeMatterRecipe("wood")
 matter.removeMatterRecipe("quartz")
+
+if krastorio.general.getSafeSettingValue("kr-rebalance-fuels") then 
+	data.raw.item["wood"].fuel_value = "2MJ"
+end
 
 local mineral_mix_matter = {
     item_name = "mineral-mix",
@@ -24,6 +29,27 @@ local seatorio_wood = {
 	unlocked_by_technology = "kr-matter-processing",
 }
 matter.createMatterRecipe(seatorio_wood)
+
+
+------------------- Changes to BZ:
+--This mod will benefit from early game fluid handling
+util.remove_ingredient("pump", "graphite")
+util.remove_ingredient("pump", "engine-unit")
+util.remove_ingredient("pump", "steel-plate")
+util.add_ingredient("pump", "iron-beam", 3)
+util.add_ingredient("pump", "copper-cable", 5)
+util.add_ingredient("pump", "lead-plate", 5)
+util.replace_ingredient("red-wire", "optical-fiber", "copper-cable")
+util.replace_ingredient("green-wire", "optical-fiber", "copper-cable")
+util.replace_ingredient("red-wire", "automation-core", "aluminum-cable")
+util.replace_ingredient("green-wire", "automation-core", "aluminum-cable")
+
+if mods["Flow Control"] then
+	replace_tech("pipe-junction", "flow_control_valves_tech", "kr-basic-fluid-handling")
+	replace_tech("pipe-elbow", "flow_control_valves_tech", "kr-basic-fluid-handling")
+	replace_tech("pipe-straight", "flow_control_valves_tech", "kr-basic-fluid-handling")
+end
+---------------------------------
 --[[
 data:extend({
 	{
