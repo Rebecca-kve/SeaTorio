@@ -51,7 +51,7 @@ data:extend({
         type = "recipe",
 		name = "dirty-water-production",
         energy_required = 4,
-		enabled = true,
+		enabled = false,
         ingredients = {
 			{type = "fluid", name = "water", amount = 1000},
 			{type = "item", name = "wood", amount = 3},
@@ -138,12 +138,12 @@ data:extend({
 	{
         type = "recipe",
 		name = "stone-washing",
-        energy_required = 6,
-		enabled = true,
+        energy_required = 10,
+		enabled = false,
         ingredients = {
 			{type = "fluid", name = "water", amount = 500, catalyst_amount = 500},
-			{type = "item", name = "stone", amount = 6},
-			{type = "item", name = "silica", amount = 20}
+			{type = "item", name = "stone", amount = 3},
+			{type = "item", name = "silica", amount = 10}
         },
 		results = {
 			{type = "item", name = "aluminum-ore", amount = 2},
@@ -175,7 +175,7 @@ data:extend({
         type = "recipe",
 		name = "fish-from-water",
         energy_required = 10,
-		enabled = true,
+		enabled = false,
         ingredients = {
 			{type = "fluid", name = "water", amount = 500, catalyst_amount = 500}
         },

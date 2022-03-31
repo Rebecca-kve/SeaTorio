@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2022-03-30
+  Features:
+    - Tuturial system
+    - prevent enemy near start, so you cant be attacked
+  Balance:
+    - landfill stack to 1000
+    - Chemical plant recipe glass replaces tungsten
+    - Stone washing cost less
+    - Rocks and tree near starting area removed
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2022-03-28
   Features:

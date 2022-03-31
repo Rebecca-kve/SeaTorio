@@ -17,11 +17,6 @@ tiercolor = {
     g = 170 / 255,
     b = 150 / 255,
     a = 1.0 },
-  ["wh"] = {
-    r = 240 / 255,
-    g = 240 / 255,
-    b = 240 / 255,
-    a = 1.0 },
 }
 
 --EARLY filtration
@@ -307,13 +302,13 @@ data:extend({
 
 	{
 		type = "recipe",
-		enabled = true,
+		enabled = false,
 		energy_required = 10,
 		name = "burner-filtration-plant",
         ingredients = {
-			{"stone-brick", 2},
-			{"iron-gear-wheel", 1},	
-			{"lead-plate", 5},
+			{"burner-inserter", 2},
+			{"stone-brick", 5},	
+			{"pipe", 5},
 			{"wood", 15}
         },
 		result = "burner-filtration-plant",
@@ -340,8 +335,8 @@ data:extend({
 		enabled = true,
         ingredients = {
 			{"wood", 10},
-			{"iron-gear-wheel", 2},
-			{"stone-brick", 5},
+			{"burner-mining-drill", 1},
+			{"sand", 10},
 			{"pipe", 5}
         },
 		result = "burner-chemical-plant",
@@ -351,12 +346,12 @@ data:extend({
 		type = "recipe",
 		name = "cheap-greenhouse",
         energy_required = 10,
-		enabled = true,
+		enabled = false,
         ingredients = {
 			{"wood", 30},
-			{"aluminum-plate", 5},
+			{"pipe", 5},
 			{"stone-brick", 5},
-			{"iron-gear-wheel", 2}
+			{"sand", 10}
         },
 		result = "cheap-greenhouse",
     },

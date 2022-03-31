@@ -43,6 +43,27 @@ util.replace_ingredient("red-wire", "optical-fiber", "copper-cable")
 util.replace_ingredient("green-wire", "optical-fiber", "copper-cable")
 util.replace_ingredient("red-wire", "automation-core", "aluminum-cable")
 util.replace_ingredient("green-wire", "automation-core", "aluminum-cable")
+util.remove_ingredient("chemical-plant", "tungsten-plate")
+util.remove_ingredient("chemical-plant", "tungsten-carbide")
+util.add_ingredient("chemical-plant", "glass", 10)
+
+--Disable for tutorial???
+data.raw.recipe["iron-chest"].enabled = false
+data.raw.recipe["iron-stick"].enabled = false
+data.raw.recipe["stone-brick"].enabled = false
+
+data.raw.recipe["small-electric-pole"].enabled = false
+data.raw.recipe["repair-pack"].enabled = false
+
+data.raw.recipe["burner-inserter"].enabled = false
+data.raw.recipe["transport-belt"].enabled = false
+
+--data.raw.recipe["lead-chest"].enabled = false
+--k2
+data.raw.recipe["iron-beam"].enabled = false
+data.raw.recipe["rare-metals"].enabled = false
+
+
 
 if mods["Flow Control"] then
 	replace_tech("pipe-junction", "flow_control_valves_tech", "kr-basic-fluid-handling")
