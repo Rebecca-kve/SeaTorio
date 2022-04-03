@@ -120,12 +120,3 @@ data:extend({
   },
 
 })
-
- --[[ 
-data.raw.recipe["iron-chest"].enabled = false
-data.raw.recipe["small-electric-pole"].enabled = false
-data.raw.recipe["repair-pack"].enabled = false
-data.raw.recipe["iron-stick"].enabled = false
---k2
-data.raw.recipe["iron-beam"].enabled = false
-]]

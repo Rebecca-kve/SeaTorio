@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2022-04-03
+  Features:
+    - Increase compatibility with AAI industry
+  Comments:
+    - A solution to AAI reducing basic wood recipe to 1/4.
+  Balance:
+    - if AAI-industry cheap greenhouse crafting speed = 1.5
+    - cheap greenhouse get a ingredient limit.
+  Bugfixes:
+    - SeaTorio burners can now use vehicle fuels to
+    - Lead filtration recipe description fix	
+---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 2022-03-30
   Features:
@@ -8,7 +21,7 @@ Date: 2022-03-30
     - landfill stack to 1000
     - Chemical plant recipe glass replaces tungsten
     - Stone washing cost less
-    - Rocks and tree near starting area removed
+    - Rocks near starting area removed
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2022-03-28

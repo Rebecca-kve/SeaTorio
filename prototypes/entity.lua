@@ -19,6 +19,10 @@ tiercolor = {
     a = 1.0 },
 }
 
+local fuel = { "chemical", "vehicle-fuel" }
+if mods["aai-industry"] then table.insert(fuel, "processed-chemical") end
+
+
 --EARLY filtration
 local burner_kr_filtration_plant_item = flib_data_util.copy_prototype(data.raw["item"]["kr-filtration-plant"], "burner-filtration-plant")
 burner_kr_filtration_plant_item.subgroup = "seatorio-building"
@@ -39,7 +43,7 @@ burner_kr_filtration_plant.module_specification = { module_slots = 0}
 burner_kr_filtration_plant.energy_usage = "250kW"
 burner_kr_filtration_plant.energy_source = {
 	type = "burner",
-	fuel_category = "chemical",
+	fuel_categories = fuel,
 	fuel_inventory_size = 1,
 	emissions_per_minute = 8,
 }
@@ -179,7 +183,7 @@ burner_chemical_plant.module_specification = { module_slots = 0}
 burner_chemical_plant.energy_usage = "100kW"
 burner_chemical_plant.energy_source = {
 	type = "burner",
-	fuel_category = "chemical",
+	fuel_categories = fuel,
 	effectivity = 0.85,
 	fuel_inventory_size = 1,
 	emissions_per_minute = 4,
@@ -247,7 +251,12 @@ data:extend({cheap_greenhouse_item})
 local cheap_greenhouse = flib_data_util.copy_prototype(data.raw["assembling-machine"]["kr-greenhouse"], "cheap-greenhouse")
 cheap_greenhouse.module_specification = { module_slots = 0}
 cheap_greenhouse.energy_usage = "75kW"
-cheap_greenhouse.crafting_speed = 0.5
+cheap_greenhouse.ingredient_count = 0  --Can only do basic wood
+if mods['aai-industry'] then
+	cheap_greenhouse.crafting_speed = 1.5 -- Increse early wood as its 1/4 in this mod
+else
+	cheap_greenhouse.crafting_speed = 0.5
+end
 cheap_greenhouse.next_upgrade = "kr-greenhouse"
 cheap_greenhouse.animation.layers[1].tint = tiercolor.t0
 cheap_greenhouse.animation.layers[1].hr_version.tint = tiercolor.t0
@@ -276,7 +285,7 @@ burner_atmospheric_condenser.module_specification = { module_slots = 0}
 burner_atmospheric_condenser.energy_usage = "0.12MW"
 burner_atmospheric_condenser.energy_source = {
 	type = "burner",
-	fuel_category = "chemical",
+	fuel_categories = fuel,
 	effectivity = 0.85,
 	fuel_inventory_size = 1,
 	emissions_per_minute = 5,

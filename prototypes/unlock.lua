@@ -52,11 +52,6 @@ util.add_prerequisite("military", "basic-tech-card-crafted")
 util.add_prerequisite("kr-automation-core", "basic-tech-card-crafted")
 util.add_prerequisite("kr-iron-pickaxe", "basic-tech-card-crafted")
 
---New tech to unlock fluid handling early
-util.remove_recipe_effect("fluid-handling", "storage-tank" )
-util.remove_recipe_effect("fluid-handling", "pump" )
-util.remove_recipe_effect("circuit-network", "red-wire" )
-util.remove_recipe_effect("circuit-network", "green-wire")
 
 --Costom fit for other mods
 if mods["Flow Control"] then
@@ -82,6 +77,7 @@ if mods["underground-pipe-pack"] then
 	util.remove_recipe_effect("advanced-underground-piping", "80-top-up-valve")
 	util.remove_recipe_effect("advanced-underground-piping", "check-valve")
 end -- Add flow controll early
+
 --------
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "burner-atmospheric-condenser" })
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "dissolver" })

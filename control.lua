@@ -1,5 +1,6 @@
 st = st or {}
 
+
 function st.have_item(player, itemname, crafted)
 	if (itemname == "burner-chemical-plant" or itemname == "stone-furnace" or itemname == "basic-tech-card") then
 		if player.force.technologies[itemname .. "-crafted"] then
@@ -32,7 +33,6 @@ script.on_init(function()
 	items["cheap-greenhouse"] = 10
 	items["burner-filtration-plant"] = 4
 	items["slow-offshore-pump"] = 5
-	items["lab"] = 1
 	
 	remote.call("freeplay", "set_created_items", items)
 	remote.call("freeplay", "set_disable_crashsite", true)

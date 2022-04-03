@@ -1,5 +1,7 @@
 local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
-local util = require('__bzaluminum__.data-util');
+local util = require('__bzaluminum__.data-util')
+--local data_util = require("data-util")
+
 matter.removeMatterRecipe("wood")
 matter.removeMatterRecipe("quartz")
 
@@ -63,13 +65,27 @@ data.raw.recipe["transport-belt"].enabled = false
 data.raw.recipe["iron-beam"].enabled = false
 data.raw.recipe["rare-metals"].enabled = false
 
+--New tech to unlock fluid handling early
+util.remove_recipe_effect("fluid-handling", "storage-tank" )
+util.remove_recipe_effect("fluid-handling", "pump" )
+util.remove_recipe_effect("circuit-network", "red-wire" )
+util.remove_recipe_effect("circuit-network", "green-wire")
 
+
+if mods['aai-industry'] then
+	util.add_effect("fluid-control", { type = "unlock-recipe", recipe = "pump" })
+	--util.add_prerequisite("kr-logistic", "basic-tech-card-crafted")--why does it not work?
+	if settings.startup["aai-fuel-processor"].value == true then
+		util.add_prerequisite("fuel-processing", "basic-tech-card-crafted")
+	end
+end
 
 if mods["Flow Control"] then
 	replace_tech("pipe-junction", "flow_control_valves_tech", "kr-basic-fluid-handling")
 	replace_tech("pipe-elbow", "flow_control_valves_tech", "kr-basic-fluid-handling")
 	replace_tech("pipe-straight", "flow_control_valves_tech", "kr-basic-fluid-handling")
 end
+
 ---------------------------------
 --[[
 data:extend({
