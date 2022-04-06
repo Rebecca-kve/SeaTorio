@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 2022-04-06
+  Changes:
+    - new oil recipes, Crude oil is made from heavy oil now
+    - New extraction icons
+    - fluid handling tech: barrels icon
+  Balance:
+    - chemical waste cleaning biomass probablity + 0.15%
+---------------------------------------------------------------------------------------------------
 Version: 0.1.8
 Date: 2022-04-03
   Features:

@@ -1,10 +1,10 @@
 {
   "name": "SeaTorio",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "factorio_version": "1.1",
   "title": "SeaTorio",
   "author": "Rebecca-x",
-  "description": "No mining, sort and automate raw resources",
+  "description": "The engineer is stuck on a small island, with only access to water, wood, fish and sand.",
   "dependencies": ["base",
 	"bzaluminum",
 	"bzvery",

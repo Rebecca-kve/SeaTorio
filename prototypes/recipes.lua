@@ -217,10 +217,9 @@ data:extend({
         energy_required = 3,
 		enabled = false,
         ingredients = {
-			{type = "fluid", name = "steam", amount = 60},
+			{type = "fluid", name = "heavy-oil", amount = 60},
 			{type = "fluid", name = "hydrogen", amount = 100},
 			{type = "item", name = "graphite", amount = 5},
-			{type = "item", name = "coke", amount = 3}
         },
 		results = {
 			{type = "fluid", name = "crude-oil", amount = 160}
@@ -238,15 +237,13 @@ data:extend({
         energy_required = 5,
 		enabled = false,
         ingredients = {
-			{type = "fluid", name = "steam", amount = 60},
-			{type = "fluid", name = "hydrogen", amount = 100},
-			{type = "item", name = "graphite", amount = 3},
-			{type = "item", name = "biomass", amount = 3}
+			{type = "fluid", name = "heavy-oil", amount = 80},
+			{type = "fluid", name = "hydrogen", amount = 120},
+			{type = "item", name = "graphite", amount = 5},
+			{type = "item", name = "biomass", amount = 5}
         },
 		results = {
-			{type="fluid", name="heavy-oil", amount= 30},
-			{type="fluid", name="light-oil", amount= 50},
-			{type="fluid", name="petroleum-gas", amount=70}
+			{type = "fluid", name = "crude-oil", amount = 300}
 		},
 		icon = "__SeaTorio__/graphics/icons/advanced-oil-processing.png",
 		icon_size = 64,
@@ -529,7 +526,7 @@ data:extend({
         },
 		results = { 
 			{type = "item", name = "wood", amount = 10},
-			{type = "item", name = "biomass", probability = 0.05, amount = 1}
+			{type = "item", name = "biomass", probability = 0.20, amount = 1}
 		},
 		icon = "__SeaTorio__/graphics/icons/clean-chemical-waste-water.png",
 		icon_size = 64,

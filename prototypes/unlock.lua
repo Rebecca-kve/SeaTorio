@@ -89,4 +89,3 @@ util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "b
 replace_tech("dirty-water-filtration-tungsten", "kr-mineral-water-gathering", "kr-enriched-ores")
 replace_tech("dirty-water-filtration-2", "copper-processing", "kr-enriched-ores")
 replace_tech("oxygen", "kr-basic-fluid-handling", "kr-atmosphere-condensation")
-

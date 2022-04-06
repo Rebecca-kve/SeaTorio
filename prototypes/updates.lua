@@ -70,7 +70,12 @@ util.remove_recipe_effect("fluid-handling", "storage-tank" )
 util.remove_recipe_effect("fluid-handling", "pump" )
 util.remove_recipe_effect("circuit-network", "red-wire" )
 util.remove_recipe_effect("circuit-network", "green-wire")
-
+data.raw.technology["fluid-handling"].icons = {
+	{
+		icon_size = 128,
+		icon = "__SeaTorio__/graphics/icons/barrels.png",
+	},
+}
 
 if mods['aai-industry'] then
 	util.add_effect("fluid-control", { type = "unlock-recipe", recipe = "pump" })

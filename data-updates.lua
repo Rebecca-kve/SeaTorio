@@ -20,6 +20,7 @@ enable_productivity_recipes = {
 "basic-extraction",
 "advanced-extraction",
 "stone-washing",
+"crude-oil-production",
 "crude-oil-production-2",
 }
 
