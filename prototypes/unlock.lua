@@ -46,6 +46,8 @@ util.add_effect("kr-quarry-minerals-extraction", { type = "unlock-recipe", recip
 util.add_effect("kr-reinforced-plates", { type = "unlock-recipe", recipe = "Stone-from-black-reinforced-plate" })
 util.add_effect("kr-reinforced-plates", { type = "unlock-recipe", recipe = "Stone-from-white-reinforced-plate" })
 util.add_effect("advanced-oil-processing", { type = "unlock-recipe", recipe = "crude-oil-production-2" })
+util.add_effect("fluid-handling", { type = "unlock-recipe", recipe = "big-water-pump" })
+
 
 --Tutorioal
 util.add_prerequisite("military", "basic-tech-card-crafted")

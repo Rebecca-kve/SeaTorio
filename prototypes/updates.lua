@@ -2,6 +2,11 @@ local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
 local util = require('__bzaluminum__.data-util')
 --local data_util = require("data-util")
 
+function replace_tech(recipe_name, new_tech, old_tech)
+	util.remove_recipe_effect(old_tech, recipe_name)
+	util.add_effect(new_tech, { type = "unlock-recipe", recipe = recipe_name })
+end
+
 matter.removeMatterRecipe("wood")
 matter.removeMatterRecipe("quartz")
 
@@ -83,12 +88,21 @@ if mods['aai-industry'] then
 	if settings.startup["aai-fuel-processor"].value == true then
 		util.add_prerequisite("fuel-processing", "basic-tech-card-crafted")
 	end
+	replace_tech("big-water-pump", "engine", "fluid-handling" )
 end
 
 if mods["Flow Control"] then
-	replace_tech("pipe-junction", "flow_control_valves_tech", "kr-basic-fluid-handling")
-	replace_tech("pipe-elbow", "flow_control_valves_tech", "kr-basic-fluid-handling")
-	replace_tech("pipe-straight", "flow_control_valves_tech", "kr-basic-fluid-handling")
+	replace_tech("pipe-junction", "kr-basic-fluid-handling", "flow_control_valves_tech")
+	replace_tech("pipe-elbow", "kr-basic-fluid-handling", "flow_control_valves_tech")
+	replace_tech("pipe-straight", "kr-basic-fluid-handling", "flow_control_valves_tech")
+end
+
+--Offshore P.U.M.P.S. and ground water
+if mods["P-U-M-P-S"] then
+	util.remove_recipe_effect("fluid-handling", "offshore-pump-1")
+	util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "offshore-pump-1" })
+	data.raw["offshore-pump"]["slow-offshore-pump"].pumping_speed = 2
+	util.replace_ingredient("offshore-pump-2", "advanced-circuit", "automation-core")
 end
 
 ---------------------------------

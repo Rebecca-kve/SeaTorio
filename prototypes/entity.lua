@@ -1,5 +1,6 @@
 local flib_data_util = require('__flib__.data-util');
 require("entity.offshore-pump")
+require("entity.big-water-pump")
 
 tiercolor = {
   ["t0"] = { 
@@ -296,7 +297,7 @@ burner_atmospheric_condenser.animation.layers[1].tint = tiercolor.t0
 burner_atmospheric_condenser.animation.layers[1].hr_version.tint = tiercolor.t0
 data:extend({burner_atmospheric_condenser})
 
---EARLY pump
+--slow pump
 
 local slow_offshore_pump_item = util.table.deepcopy(data.raw["item"]["offshore-pump"])
 slow_offshore_pump_item.name = "slow-offshore-pump"
@@ -306,6 +307,12 @@ slow_offshore_pump_item.icon = "__SeaTorio__/graphics/icons/offshore-pump.png"
 slow_offshore_pump_item.subgroup = "seatorio-building"
 slow_offshore_pump_item.icon_size = 32
 data:extend({slow_offshore_pump_item})
+
+---Add big pump
+
+local fast_water_pump_item = flib_data_util.copy_prototype(data.raw["item"]["pumpjack"], "big-water-pump")
+fast_water_pump_item.subgroup = "seatorio-building"
+data:extend({fast_water_pump_item})
 
 data:extend({
 
@@ -388,6 +395,19 @@ data:extend({
 			{ "aluminum-plate", 1 },
 		},
 		result = "slow-offshore-pump",
+	},
+	
+	{
+		type = "recipe",
+		name = "big-water-pump",
+		energy_required = 1,
+		enabled = false,
+		ingredients = {
+			{ "kr-mineral-water-pumpjack", 1 },
+			{ "engine-unit", 2 },
+			{ "rare-metals", 5 },
+		},
+		result = "big-water-pump",
 	},
 })
 
