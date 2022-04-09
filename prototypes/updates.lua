@@ -2,11 +2,6 @@ local matter = require("__Krastorio2__/lib/public/data-stages/matter-util")
 local util = require('__bzaluminum__.data-util')
 --local data_util = require("data-util")
 
-function replace_tech(recipe_name, new_tech, old_tech)
-	util.remove_recipe_effect(old_tech, recipe_name)
-	util.add_effect(new_tech, { type = "unlock-recipe", recipe = recipe_name })
-end
-
 matter.removeMatterRecipe("wood")
 matter.removeMatterRecipe("quartz")
 
@@ -91,10 +86,11 @@ if mods['aai-industry'] then
 	replace_tech("big-water-pump", "engine", "fluid-handling" )
 end
 
-if mods["Flow Control"] then
-	replace_tech("pipe-junction", "kr-basic-fluid-handling", "flow_control_valves_tech")
-	replace_tech("pipe-elbow", "kr-basic-fluid-handling", "flow_control_valves_tech")
-	replace_tech("pipe-straight", "kr-basic-fluid-handling", "flow_control_valves_tech")
+
+if mods["Flow Control"] then  --Needed as k2 try to putt pipes in basic-fluid
+	replace_tech("pipe-junction", "flow_control_valves_tech","kr-basic-fluid-handling")
+	replace_tech("pipe-elbow", "flow_control_valves_tech", "kr-basic-fluid-handling")
+	replace_tech("pipe-straight", "flow_control_valves_tech","kr-basic-fluid-handling")
 end
 
 --Offshore P.U.M.P.S. and ground water

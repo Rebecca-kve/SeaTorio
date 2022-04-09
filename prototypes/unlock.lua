@@ -91,3 +91,21 @@ util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "b
 replace_tech("dirty-water-filtration-tungsten", "kr-mineral-water-gathering", "kr-enriched-ores")
 replace_tech("dirty-water-filtration-2", "copper-processing", "kr-enriched-ores")
 replace_tech("oxygen", "kr-basic-fluid-handling", "kr-atmosphere-condensation")
+
+--POWER - Some tweaks as SeaTorio require more power
+replace_tech("biomethanol", "kr-gas-power-station", "kr-advanced-chemistry") -- Power must be available earlyer
+data.raw["generator"]["kr-gas-power-station"].max_power_output = "6750KW"
+data.raw["fluid"]["biomethanol"].fuel_value = "1125KJ"
+data.raw["recipe"]["biomethanol"].energy_required = data.raw["recipe"]["biomethanol"].energy_required/2
+data.raw["item"]["bio-fuel"].fuel_value = "20MJ"
+util.remove_prerequisite("kr-bio-fuel", "kr-advanced-chemistry")
+util.remove_prerequisite("kr-bio-fuel", "chemical-science-pack")
+util.add_prerequisite("kr-bio-fuel", "kr-gas-power-station")
+data.raw["technology"]["kr-bio-fuel"].unit = {
+	count = 200,
+	ingredients = {
+		{ "automation-science-pack", 1 },
+		{ "logistic-science-pack", 1 },
+	},
+	time = 30,
+}

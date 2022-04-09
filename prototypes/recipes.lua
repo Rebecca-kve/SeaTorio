@@ -8,7 +8,7 @@ data:extend({
 		auto_barrel = true,
 		base_color = { r = 0.13, g = 1.00, b = 0.00 },
 		flow_color = { r = 0.13, g = 1.00, b = 0.00 },
-	    fuel_value = "500KJ",
+	    fuel_value = "750KJ",
 		emissions_multiplier = 5.0,
 		icon = "__SeaTorio__/graphics/icons/chemical-waste-water.png",
 		icon_size = 64,
@@ -669,6 +669,33 @@ data:extend({
 		icon_size = 64,
 		order = "a[zircon-production]",
 		category = "crafting-with-fluid",
+		subgroup = "seatorio-ore"
+    },
+	
+	
+---Quartz skip sand
+	{
+        type = "recipe",
+		name = "quartz-from-water",
+        energy_required = 18,
+		enabled = false,
+        ingredients = {
+			{type = "fluid", name = "water", amount = 4000}
+        },
+		results = {
+			{type = "item", name = "quartz", amount = 6},
+		},
+		icons = {
+			{ icon = kr_items_with_variations_icons_path .. "quartz/quartz.png", icon_size = 64 },
+			{
+				icon = "__SeaTorio__/graphics/icons/sand-from-water.png",
+				icon_size = 64,
+				scale = 0.26,
+				shift = { 8, -8 },
+			},
+		},
+		order = "q[quartz]",
+		category = "fluid-filtration",
 		subgroup = "seatorio-ore"
     },
 

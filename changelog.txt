@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 2022-04-09
+  Comments:
+    - Did some testing with power as SeaTorio uses way more power than normal
+    - Add a readme file
+    - Add a quartz recipe directly from water
+  Balance:
+    - Biomethanol unlocks with gas power station
+    - Biomethanol and gas burner is buffed by 50%
+    - Biomethanol recipe time half, one can run 2 gas power stations
+    - Chemical waste fule value +50%
+    - Bio fuel value + 5MJ
+    - Bio fuel can be unlocked earlyer
+  Bugfixes:
+    - flow_control_valves_tech fix (k2 was putting pipes in basic fluid)
+    - Migration files were wrong
+---------------------------------------------------------------------------------------------------
 Version: 0.1.10
 Date: 2022-04-08
   Changes:

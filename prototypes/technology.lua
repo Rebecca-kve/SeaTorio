@@ -148,6 +148,33 @@ data:extend({
 		time = 30
 	},
   },
+  
+  {
+    type = "technology",
+    name = "quartz-from-water",
+	icons = {
+		{ icon = kr_items_with_variations_icons_path .. "quartz/quartz.png", icon_size = 64 },
+		{
+			icon = "__SeaTorio__/graphics/icons/sand-from-water.png",
+			icon_size = 64,
+			scale = 0.40,
+			shift = { 8, -8 },
+		},
+	},
+    effects = {
+		{ type = "unlock-recipe", recipe = "quartz-from-water" },
+    },
+    prerequisites = {"advanced-extraction"},
+    unit = {
+		count = 75,
+		ingredients =  {
+			{"basic-tech-card", 2},
+			{"automation-science-pack", 2},
+			{"logistic-science-pack", 1},
+		},
+		time = 30
+	},
+  },  
 
   {
     type = "technology",
@@ -198,7 +225,7 @@ data:extend({
 		{
 			icon = "__base__/graphics/icons/coal.png",
 			icon_size = 64,
-			scale = 0.26,
+			scale = 0.40,
 			shift = { 8, -8 },
 		},
 	},
