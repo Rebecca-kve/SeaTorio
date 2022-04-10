@@ -84,6 +84,8 @@ if mods['aai-industry'] then
 		util.add_prerequisite("fuel-processing", "basic-tech-card-crafted")
 	end
 	replace_tech("big-water-pump", "engine", "fluid-handling" )
+	util.remove_ingredient("concrete", "zircon")
+	util.remove_ingredient("concrete", "iron-stick") --New ingredient is alredy added by bz
 end
 
 

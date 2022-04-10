@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.12
+Date: 2022-04-10
+  Features:
+    - Ship added for early exploration. made by icedevml (https://mods.factorio.com/mod/Ships)
+  Balance:
+    - iron ore removed from Concrete recipe as silica is added
+---------------------------------------------------------------------------------------------------
 Version: 0.1.11
 Date: 2022-04-09
   Comments:

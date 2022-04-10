@@ -17,3 +17,5 @@ More water:
 [Fluid Must Flow](https://mods.factorio.com/mod/FluidMustFlow)
 
 This mod have modified assets from [Krastorio2](https://mods.factorio.com/mod/Krastorio2) and [Krastorio- legacy-graphics](https://mods.factorio.com/mod/Krastorio-graphics)
+Ship is from [Ships](https://mods.factorio.com/mod/Ships)
+Enter and leave ship from [Cargo Ships](https://mods.factorio.com/mod/cargo-ships)

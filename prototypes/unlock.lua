@@ -85,6 +85,7 @@ util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "b
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "dissolver" })
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "stone-brick-mineral-mix" })
 util.add_effect("kr-basic-fluid-handling", { type = "unlock-recipe", recipe = "basic-extraction" })
+util.remove_ingredient("concrete", "iron-ore")
 
 
 --------New tech requirements
