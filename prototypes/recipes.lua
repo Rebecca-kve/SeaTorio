@@ -1,3 +1,18 @@
+if mods.bztin then stone_washing_results ={
+	{type = "item", name = "aluminum-ore", amount = 2},
+	{type = "item", name = "tin-ore", amount = 2},
+	{type = "item", name = "iron-ore", probability = 0.60, amount = 2},
+	{type = "fluid", name = "dirty-water", amount = 500, catalyst_amount = 500}
+}
+else stone_washing_results ={
+	{type = "item", name = "aluminum-ore", amount = 2},
+	{type = "item", name = "iron-ore", probability = 0.60, amount = 2},
+	{type = "fluid", name = "dirty-water", amount = 500, catalyst_amount = 500}
+}
+end
+	
+
+
 data:extend({
 ----NEW Fluids
 	{
@@ -145,11 +160,7 @@ data:extend({
 			{type = "item", name = "stone", amount = 3},
 			{type = "item", name = "silica", amount = 10}
         },
-		results = {
-			{type = "item", name = "aluminum-ore", amount = 2},
-			{type = "item", name = "iron-ore", probability = 0.60, amount = 2},
-			{type = "fluid", name = "dirty-water", amount = 500, catalyst_amount = 500}
-		},
+		results = stone_washing_results,
 		icons = {
 			{ icon = "__base__/graphics/icons/stone.png", icon_size = 64 },
 			{

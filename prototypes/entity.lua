@@ -193,6 +193,8 @@ burner_chemical_plant.crafting_speed = 0.75
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "assembling-machine"
 burner_chemical_plant.fast_replaceable_group = "assembling-machine"
 burner_chemical_plant.next_upgrade = "chemical-plant"
+
+
 burner_chemical_plant.animation = make_4way_animation_from_spritesheet({ 
 	layers = {
 		{

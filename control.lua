@@ -36,7 +36,7 @@ script.on_init(function()
 	
 	remote.call("freeplay", "set_created_items", items)
 	remote.call("freeplay", "set_disable_crashsite", true)
-	remote.call("freeplay", "get_disable_crashsite", true)
+	--remote.call("freeplay", "get_disable_crashsite", true) --Why was this here again?
 
 
 	local num = 0
